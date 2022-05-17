@@ -1,0 +1,27 @@
+{
+  "name": "p3-ohmyfood",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch style.scss style.css",
+    "prefix": "postcss ./css/style.css --use autoprefixer -d ./css/prefixed"
+},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LB0703/p3-ohmyfood.git"
+  },
+  "keywords": [ 
+    "Malaxeur01120"
+  ],
+  "author": "",
+  "license": "ISC",
+  "browserslist": "last 4 versions",
+  "bugs": {
+    "url": "https://github.com/LB0703/p3-ohmyfood/issues"
+  },
+  "homepage": "https://github.com/LB0703/p3-ohmyfood#readme",
+  "dependencies": {
+    "sass": "^1.51.0"
+  }
+}

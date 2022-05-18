@@ -5,40 +5,44 @@
       <meta http-equiv="X-UA-Compatible" content="IE=edge">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <title>ohmyfood</title>
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Shrikhand&display=swap" rel="stylesheet">
       <script src="https://kit.fontawesome.com/a0bf48136d.js" crossorigin="anonymous"></script>
       <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
       <header>
-            <img src="./images/logo/ohmyfood.png" alt="logo ohmyfood">
+            <img class=header__logo src="./images/logo/ohmyfood.png" alt="logo ohmyfood">
       </header>
+
 <main>
             <!--localisation-->
       <section class="localisation">
-            <i class="fa-solid fa-location-dot"></i>
-            <span class="name-city">Paris, Bellevue</span>
+            <i class="fa-solid fa-location-dot localisation__icon"></i>
+            <span class="localisation__name-city">Paris, Bellevue</span>
       </section>
       <section class="info">
-            <h1>Réservez le menu qui vous convient</h1>
-            <p>Découvrez des restaurants d'exception, sélectionnés par nos soins.</p>
+            <h1 class="info__book">Réservez le menu qui vous convient</h1>
+            <p class="info__select">Découvrez des restaurants d'exception, sélectionnés par nos soins.</p>
             <button>Explorer nos restautants</button>
       </section>
             <!--functioning-->
       <section class="functioning">
             <div class="container">
-                  <h1>Fonctionnement</h1>
-                  <ol>
-                        <li>
+                  <h1 class="functioning__title">Fonctionnement</h1>
+                  <ol class="functioning__list">
+                        <li class="functioning__btn">
                               <i class="fa-solid fa-mobile-screen-button"></i>
-                              <span class="description-funtioning">Choississez un restaurant</span>
-                        </li>
-                        <li>
+                              <span class="funtioning__description">Choississez un restaurant</span>
+                        <li class="functioning__btn">
                               <i class="fa-solid fa-list-ul"></i>
-                              <span class="description-funtioning">Composez votre menu</span>
+                              <span class="funtioning__description">Composez votre menu</span>
                         </li>
-                        <li>
+                        <li class="functioning__btn">
                               <i class="fa-solid fa-store"></i>
-                              <span class="description-funtioning">Dégustez au restaurant</span>
+                              <span class="funtioning__description">Dégustez au restaurant</span>
                         </li>
                   </ol>
             </div>
@@ -57,6 +61,7 @@
                         <span class="city">Ménilmmontant</span>
                         <i class="far fa-heart fa"></i>
                   </div>
+            
             </article>  
             <article class="cards">
                   <a class="card" href="#">
@@ -73,7 +78,6 @@
                   <a class="card" href="#">
                   <img src="./images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg" alt="A la française">
                   </a>
-                  <span class="new">Nouveau</span>
                   <div class="description">
                   <h2>A la française</h2>
                   <span class="city"></span>Cité Rouge
@@ -84,7 +88,6 @@
                   <a class="card" href="#">
                   <img src="./images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg" alt="Le délice des sens">
                   </a>
-                  <span class="new">Nouveau</span>
                   <div class="description">
                   <h2>Le délice des sens</h2>
                   <span class="city">Folie-Méricourt</span>

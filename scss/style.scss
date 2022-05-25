@@ -1,7 +1,6 @@
-@import "base/header";
 @import "utils/normalize";
 @import "base/footer";
-
+@import "base/header";
 
 $color-primary: #9356DC;
 $color-secondary: #FF79DA;
@@ -205,7 +204,7 @@ p {
       margin-left: auto;
       margin-right: auto;
       justify-content: center;
-      width: 90%;
+      width: 80%;
       position: relative;
       background-color: #f6f6f6;
       border-radius: 25px 25px 0 0;
@@ -214,6 +213,7 @@ p {
             &__header{
                   display: flex;
                   justify-content: space-between;
+                  
                   align-items: center;
                   margin: 0 30px;
             }
@@ -223,12 +223,21 @@ p {
 }
 .menu-container {
       display: flex;
-      flex-direction: row;
+      flex-direction: column;
       justify-content: center;  
 }
 .menu-item {
-      width: 31%;
+      width: 50%;
       margin: auto;
+   
+}
+.menu-item h2:after{
+      content: "";
+      display: block;
+      border-bottom: 5px solid#99E2D0;
+      height: 10px;
+      width: 60px;
+      
 }
 .submenu-item {
       display: flex;
@@ -237,21 +246,21 @@ p {
       box-shadow: 5px 5px 10px rgb(179, 178, 178);
       margin-bottom: 10px;     
             &__choise {
-                  display: flex;
-                  flex-direction: column;
-                  align-items: flex-start; 
+                  overflow: hidden;
+                  width: 80%;
                   margin-left: 20px;
                   padding: 0px ;
             }
             &__text {
-            margin: 0;
-            padding-bottom: 8px;
+          
+
             }
             &__price {
                   display: flex;
-                  justify-content: flex-end;
-                  align-items:flex-end;
+                  overflow: hidden;
+                  width: 100%;
                   margin: auto;
+                  
             }
             &__check-command{
                   margin-left: auto;
@@ -260,6 +269,7 @@ p {
                   padding-right: 10px;
                   font-size: 40px;
                   color: #fff;
+                  
             }
 }
 .command-btn {

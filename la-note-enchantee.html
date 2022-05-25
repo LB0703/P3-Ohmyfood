@@ -6,36 +6,43 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <title>ohmyfood-la-note-enchantee</title>
       <script src="https://kit.fontawesome.com/a0bf48136d.js" crossorigin="anonymous"></script>
-      <link rel="stylesheet" href="style.css">
+      <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
-      <header>
-            <img src="./images/logo/ohmyfood.png" alt="logo ohmyfood">
+      <header class="header">
+            <a class="header__harrow" href="./home.html"><i class="fa-solid fa-arrow-left"></i></a>
+            <img class="header__logo" src="./images/logo/ohmyfood.png" alt="logo ohmyfood">
       </header>
       <main>
-
+            <div class="banner">   
+                  <a href="./home.html">            
+                  <img class="banner__picture" src="./images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg" alt="La note enchantée">
+                  </a>
+            </div>   
       </main>
       <footer>
-            <div class="container">
-                  <img src="./images/logo/ohmyfood.png" alt="logo">
-                  <ul class="list">
-                        <li class="footer-list">
+            <div class="footer">
+                  <div class="footer__logo">
+                  <h4>ohmyfood</h4>
+                  </div>
+                  <ul class="footer__list">
+                        <li class="footer__element">
                               <i class="fa-solid fa-utensils"></i>
-                              <p>Proposer un restaurant</p>
+                              <p class="footer__text">Proposer un restaurant</p>
                         </li>
-                        <li>
+                        <li class="footer__element">
                               <i class="fa-solid fa-handshake-angle"></i>
-                              <p>Devenir partenair</p>
+                              <p class="footer__text">Devenir partenair</p>
                         </li>
-                        <li>
-                              <p>Mentions légales</p>
+                        <li class="footer__element">
+                              <p class="footer__text">Mentions légales</p>
                         </li>
-                        <li>
-                              <p>contact</p>
+                        <li class="footer__element">
+                              <p class="footer__text" >contact</p>
                         </li>
                   </ul>
             </div>
-            </footer>
+      </footer>
 
 </body>
 </html>

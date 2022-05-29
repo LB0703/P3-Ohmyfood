@@ -1,29 +1,44 @@
 .footer{
       background-color: #302e2e;
       display: block;
-      bottom: 60px;
+     padding: 25px;
+   
             &__logo {
             font-size: 30px;
             font-weight: 50;
             font-family: "shrikhand", "cursive";
             color: white;
-            padding-top: 10px;
-            padding-left: 30px;
+            
             }
             &__list{
             color: white;
             display: flex;
-            flex-direction: column;
-            list-style: none;
+            flex-direction: column ;
+            padding: 5px;
+         
+          
             }
             &__element{ 
             display: flex;
             flex-direction: row;
+            justify-content: flex-start;
             align-items: center;
             text-decoration: none;
             font-size: 20px;
+            padding-left: 0px;
             }
             &__text{
-                  padding-left: 10px;
+                 padding-left: 10px;
+                  color: white;
+                  text-decoration: none;
+                  
+            }
+            a{
+                  text-decoration: none;
+                  text-align: left;
+                  
+            }
+            a:hover{
+                  transform: scale(1.03);
             }
 }

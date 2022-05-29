@@ -3,6 +3,7 @@ $color-secondary: #FF79DA;
 $color-tertiary: #99E2D0;
 
 
+
 .header {
       text-align: center;
       display: block;
@@ -25,7 +26,11 @@ $color-tertiary: #99E2D0;
 }
             &__harrow:hover{
             color: $color-primary;
+      }
+@media #{$mobile} {
+      width: 100%;
 }
+
 
 
 }

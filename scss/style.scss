@@ -1,6 +1,8 @@
 @import "utils/normalize";
+@import "utils/responsive";
 @import "base/footer";
 @import "base/header";
+
 
 $color-primary: #9356DC;
 $color-secondary: #FF79DA;
@@ -17,14 +19,28 @@ body{
       padding: 0;
 }
 h1{
-      font-family: "shrikhand", "cursive";
-}
+      font-family: $font-familly-text;
+}  
+      @media #{$mobile} {
+            h1{
+                  font-size: 25px;
+            }
+      }
+
 
 h2{
       text-decoration: none;
       font-family: $font-familly-text;
       font-size: 20px;
 }
+      @media #{$mobile} {
+            h2{
+            font-size: 20px;
+            
+            }
+      }
+
+
 h3{
       font-family: $font-familly-text;
       font-size: 20px;
@@ -39,24 +55,49 @@ p {
 .localisation{
       display: flex;
       justify-content: center;
+      align-items: center;
+      
       width: 100%;
-      margin:  0;
       padding: 20px 0 ;
-      background: linear-gradient(to bottom, lightgrey, #f6f6f6);
+      border-top:  solid rgb(196, 194, 194);
+      background: linear-gradient(to bottom,  lightgrey, #ebeaea);
             &__icon{
                   font-size: $font-seize-icon;
+                  margin-right: 10px;
             }
             &__name-city{
-                  padding-left: 10px;
-                  font-size: 25px;      
+                  text-align: center;
+                  font-size: 25px;  
+                  border: none;    
+                  background-color: transparent;
+                  width: 10%;
+                  
+      }
+} 
+      @media #{$tablette} {
+      .localisation__name-city {
+            width: 26%;
       }
 }
-.info{
-      text-align: center; 
-      background-color: #fafafa;
+      @media #{$mobile} { 
+            .localisation { 
+            display: flex;
+            justify-content: center;        
+      }
+            .localisation__icon {  
+            padding-left: 10px;
+      }
+            .localisation__name-city{
+            width: 50%;
+      }
+      }
+      .info{  
+            text-align: center;
+      background-color: #f6f6f6;
       padding:  50px 0;
             &__button{
                   border: $color-primary;
+                  box-shadow: 5px 5px 10px rgb(143, 142, 142);
                   background: linear-gradient(to top, #9356DC,#FF79DA);
                   padding: 20px 80px ;
                   border-radius: 35px;
@@ -69,31 +110,39 @@ p {
             &__button:hover{
                   transform: scale(1.04);
             }
+            @media #{$mobile}{
+                  
+                  &__button{
+                        font-size: 15px;
+                        padding: 18px 60px;
+                  }
+            }
 }
 .functioning{
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      margin-top: 15px;
-            &__container{
-                  display: flex;
-                  flex-direction: row;
-                  align-items: center;
-            }
+
             &__title{
                   text-align: center;
+                  padding: 10px 20px;
             }
-            &__btn {
-                  padding: 20px 50px;
+            &__list{
+                  display: flex;
+                  justify-content: center;
+                  flex-wrap: wrap;
+                  width: 100%;
+            }
+            &__btn{
+                  position: relative;
+                  box-shadow: 5px 5px 10px rgb(199, 197, 197);
+                  padding: 20px;
                   background-color: #f6f6f6;
-                  margin: 40px 50px 40px 50px;
+                 margin-right: 40px;
+                 margin-bottom: 20px;
                   border-radius: 15px;
                   cursor: pointer;
-                  &:hover {
-                        background-color: #f8e1f1;
-                  }
-                  }
+                  width: 20%;
+                  text-align: center;
+            
+            }
             &__description {
                   font-size: 20px;
                   color: black;
@@ -102,13 +151,21 @@ p {
             color: gray;
             padding-right: 20px;
             font-size: $font-seize-icon;
-            &:hover{
+
+      } 
+      .functioning{
+            &__btn
+            &:hover{ 
+                  background-color: #f8e1f1;
+            &__icon:hover{ 
                   color: $color-primary;
             }
-            }     
+      }
+}
+                
       ol {
-            list-style-type: none;
-            position: relative;
+            list-style: none;
+            
             counter-reset: compteListe ;
       }
       ol li::before {
@@ -118,20 +175,65 @@ p {
             justify-content: center;
             align-items: center;
             color: #fff;
-            left: 5rem;
+            bottom: 1rem;
+            left: -20px;
             height: 35px;
             width: 35px;
             position: absolute;            
             border-radius: 100%;
             background-color: #9356DC;
       }
+@media #{$tablette}{
+      &__btn{
+            width: 50%;
+            text-align: center;
+      }
 }
+      @media #{$mobile}{
+            .functioning__container {
+            display: flex ;
+            flex-direction: column ;
+            width:100%;
+      }
+            &__list{
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            }
+            &__title{
+            text-align: start;
+            
+            }
+            &__btn{
+                  
+                 
+                  width: 80%;
+            }
+            &__description{
+                  font-size: 15px;
+            }
+            &__icon{
+            font-size: 15px;
+            }
+      }
+}
+
+
+
+
+
 
 .restaurants {
       background-color: #f6f6f6;
             &__title{
                   padding: 40px 0;
                   text-align: center;
+            }
+            @media #{$mobile}{
+                  &__title{
+                        text-align: left;
+                        padding: 10px 20px;
+                  }
             }
       }
 .container-restaurants {
@@ -142,12 +244,11 @@ p {
       width: 70%;
       margin: auto;
 }
-
 .card {
       position: relative;
       box-shadow: 5px 5px 10px rgb(199, 197, 197);
       background-color: #f5f3f3;
-      border-radius: 25px;
+      border-radius: 15px;
       width: 40%;
       margin-bottom: 50px;
       transition: 0.3s;
@@ -158,7 +259,7 @@ p {
             position: relative;
             width: 100%;
             height: 250px;
-            border-radius: 25px 25px 0 0 ;
+            border-radius: 15px 15px 0 0 ;
             object-fit: cover;
       }
       &__new{
@@ -181,16 +282,50 @@ p {
             position: relative; 
       }
       &__far {
+            transition-duration: .25s;
             font-size: 25px;
             position: absolute;
             right: 16px;
             bottom: 1rem;
-            background-color: initial;
+            color: #9356DC;
+            display: none;
+            &__far:hover{
+                  color: #9356DC;
+                  border: solid red;
+            }
       }
-      
+      &__heart-regular{
+            font-size: 25px;
+            position: absolute;
+            right: 16px;
+            bottom: 1rem;
+            
+      }
 }
-
-
+.card a{
+      text-decoration: none;
+}
+@media #{$mobile}{
+      .container-restaurants{
+            display: flex;
+            flex-direction: column;
+            width: 90%;
+      }
+.card{
+width: 100%;
+}
+.picture{
+height: 150px;
+}
+}
+@media #{$tablette} {
+      .container-restaurants{
+            width: 100%;
+      }
+      .card{
+            width: 46%;
+      }
+}
 .banner{
       position: relative;
             &__picture {
@@ -229,7 +364,6 @@ p {
 .menu-item {
       width: 50%;
       margin: auto;
-   
 }
 .menu-item h2:after{
       content: "";
@@ -251,10 +385,7 @@ p {
                   margin-left: 20px;
                   padding: 0px ;
             }
-            &__text {
-          
-
-            }
+            
             &__price {
                   display: flex;
                   overflow: hidden;
@@ -289,5 +420,6 @@ justify-content: center;
             &:hover{
                   transform: scale(1.03);
             }
-      }
-}
+       }
+   }
+ 

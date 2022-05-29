@@ -340,31 +340,40 @@ template {
 .footer {
   background-color: #302e2e;
   display: block;
-  bottom: 60px;
+  padding: 25px;
 }
 .footer__logo {
   font-size: 30px;
   font-weight: 50;
   font-family: "shrikhand", "cursive";
   color: white;
-  padding-top: 10px;
-  padding-left: 30px;
 }
 .footer__list {
   color: white;
   display: flex;
   flex-direction: column;
-  list-style: none;
+  padding: 5px;
 }
 .footer__element {
   display: flex;
   flex-direction: row;
+  justify-content: flex-start;
   align-items: center;
   text-decoration: none;
   font-size: 20px;
+  padding-left: 0px;
 }
 .footer__text {
   padding-left: 10px;
+  color: white;
+  text-decoration: none;
+}
+.footer a {
+  text-decoration: none;
+  text-align: left;
+}
+.footer a:hover {
+  transform: scale(1.03);
 }
 
 .header {
@@ -391,6 +400,11 @@ template {
 .header__harrow:hover {
   color: #9356DC;
 }
+@media only screen and (max-width:767px) {
+  .header {
+    width: 100%;
+  }
+}
 
 * {
   box-sizing: border-box;
@@ -402,15 +416,25 @@ body {
 }
 
 h1 {
-  font-family: "shrikhand", "cursive";
+  font-family: "roboto", "cursive";
 }
 
+@media only screen and (max-width:767px) {
+  h1 {
+    font-size: 25px;
+  }
+}
 h2 {
   text-decoration: none;
   font-family: "roboto", "cursive";
   font-size: 20px;
 }
 
+@media only screen and (max-width:767px) {
+  h2 {
+    font-size: 20px;
+  }
+}
 h3 {
   font-family: "roboto", "cursive";
   font-size: 20px;
@@ -424,26 +448,51 @@ p {
 .localisation {
   display: flex;
   justify-content: center;
+  align-items: center;
   width: 100%;
-  margin: 0;
   padding: 20px 0;
-  background: linear-gradient(to bottom, lightgrey, #f6f6f6);
+  border-top: solid rgb(196, 194, 194);
+  background: linear-gradient(to bottom, lightgrey, #ebeaea);
 }
 .localisation__icon {
   font-size: 25px;
+  margin-right: 10px;
 }
 .localisation__name-city {
-  padding-left: 10px;
+  text-align: center;
   font-size: 25px;
+  border: none;
+  background-color: transparent;
+  width: 10%;
 }
 
+@media only screen and (min-width: 768px) and (max-width: 1300px) {
+  .localisation__name-city {
+    width: 26%;
+  }
+}
+@media only screen and (max-width:767px) {
+  .localisation {
+    display: flex;
+    justify-content: center;
+  }
+
+  .localisation__icon {
+    padding-left: 10px;
+  }
+
+  .localisation__name-city {
+    width: 50%;
+  }
+}
 .info {
   text-align: center;
-  background-color: #fafafa;
+  background-color: #f6f6f6;
   padding: 50px 0;
 }
 .info__button {
   border: #9356DC;
+  box-shadow: 5px 5px 10px rgb(143, 142, 142);
   background: linear-gradient(to top, #9356DC, #FF79DA);
   padding: 20px 80px;
   border-radius: 35px;
@@ -456,31 +505,34 @@ p {
 .info__button:hover {
   transform: scale(1.04);
 }
+@media only screen and (max-width:767px) {
+  .info__button {
+    font-size: 15px;
+    padding: 18px 60px;
+  }
+}
 
-.functioning {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  margin-top: 15px;
-}
-.functioning__container {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-}
 .functioning__title {
   text-align: center;
+  padding: 10px 20px;
+}
+.functioning__list {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 100%;
 }
 .functioning__btn {
-  padding: 20px 50px;
+  position: relative;
+  box-shadow: 5px 5px 10px rgb(199, 197, 197);
+  padding: 20px;
   background-color: #f6f6f6;
-  margin: 40px 50px 40px 50px;
+  margin-right: 40px;
+  margin-bottom: 20px;
   border-radius: 15px;
   cursor: pointer;
-}
-.functioning__btn:hover {
-  background-color: #f8e1f1;
+  width: 20%;
+  text-align: center;
 }
 .functioning__description {
   font-size: 20px;
@@ -491,12 +543,14 @@ p {
   padding-right: 20px;
   font-size: 25px;
 }
-.functioning__icon:hover {
+.functioning .functioning__btn .functioning .functioning:hover {
+  background-color: #f8e1f1;
+}
+.functioning .functioning__btn .functioning .functioning:hover__icon:hover {
   color: #9356DC;
 }
 .functioning ol {
-  list-style-type: none;
-  position: relative;
+  list-style: none;
   counter-reset: compteListe;
 }
 .functioning ol li::before {
@@ -506,12 +560,43 @@ p {
   justify-content: center;
   align-items: center;
   color: #fff;
-  left: 5rem;
+  bottom: 1rem;
+  left: -20px;
   height: 35px;
   width: 35px;
   position: absolute;
   border-radius: 100%;
   background-color: #9356DC;
+}
+@media only screen and (min-width: 768px) and (max-width: 1300px) {
+  .functioning__btn {
+    width: 50%;
+    text-align: center;
+  }
+}
+@media only screen and (max-width:767px) {
+  .functioning .functioning__container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  .functioning__list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .functioning__title {
+    text-align: start;
+  }
+  .functioning__btn {
+    width: 80%;
+  }
+  .functioning__description {
+    font-size: 15px;
+  }
+  .functioning__icon {
+    font-size: 15px;
+  }
 }
 
 .restaurants {
@@ -520,6 +605,12 @@ p {
 .restaurants__title {
   padding: 40px 0;
   text-align: center;
+}
+@media only screen and (max-width:767px) {
+  .restaurants__title {
+    text-align: left;
+    padding: 10px 20px;
+  }
 }
 
 .container-restaurants {
@@ -535,7 +626,7 @@ p {
   position: relative;
   box-shadow: 5px 5px 10px rgb(199, 197, 197);
   background-color: #f5f3f3;
-  border-radius: 25px;
+  border-radius: 15px;
   width: 40%;
   margin-bottom: 50px;
   transition: 0.3s;
@@ -547,7 +638,7 @@ p {
   position: relative;
   width: 100%;
   height: 250px;
-  border-radius: 25px 25px 0 0;
+  border-radius: 15px 15px 0 0;
   object-fit: cover;
 }
 .card__new {
@@ -570,13 +661,53 @@ p {
   position: relative;
 }
 .card__far {
+  transition-duration: 0.25s;
   font-size: 25px;
   position: absolute;
   right: 16px;
   bottom: 1rem;
-  background-color: initial;
+  color: #9356DC;
+  display: none;
+}
+.card__far__far:hover {
+  color: #9356DC;
+  border: solid red;
+}
+.card__heart-regular {
+  font-size: 25px;
+  position: absolute;
+  right: 16px;
+  bottom: 1rem;
 }
 
+.card a {
+  text-decoration: none;
+}
+
+@media only screen and (max-width:767px) {
+  .container-restaurants {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+  }
+
+  .card {
+    width: 100%;
+  }
+
+  .picture {
+    height: 150px;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 1300px) {
+  .container-restaurants {
+    width: 100%;
+  }
+
+  .card {
+    width: 46%;
+  }
+}
 .banner {
   position: relative;
 }

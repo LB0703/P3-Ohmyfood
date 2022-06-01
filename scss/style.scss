@@ -2,6 +2,7 @@
 @import "utils/responsive";
 @import "base/footer";
 @import "base/header";
+@import "components/buttons";
 
 
 $color-primary: #9356DC;
@@ -13,116 +14,90 @@ $font-seize-icon : 25px;
 
 *{
       box-sizing: border-box;
-}
-body{
       margin: 0;
       padding: 0;
 }
 h1{
-      font-family: $font-familly-text;
+      font-family: $font-familly-logo-title;
 }  
       @media #{$mobile} {
             h1{
-                  font-size: 25px;
+            font-size: 25px;
             }
       }
-
-
 h2{
       text-decoration: none;
       font-family: $font-familly-text;
-      font-size: 20px;
+      font-size: 30px;
 }
       @media #{$mobile} {
             h2{
-            font-size: 20px;
-            
+            font-size: 25px;
             }
       }
-
-
 h3{
       font-family: $font-familly-text;
-      font-size: 20px;
+      font-size: 22px;
 }
 p {
       font-family: $font-familly-text;
       font-size: 18px;
 }
-
-
-
 .localisation{
       display: flex;
       justify-content: center;
       align-items: center;
-      
       width: 100%;
       padding: 20px 0 ;
       border-top:  solid rgb(196, 194, 194);
-      background: linear-gradient(to bottom,  lightgrey, #ebeaea);
+      background: linear-gradient(to bottom,  rgb(223, 222, 222), #ebeaea);
             &__icon{
                   font-size: $font-seize-icon;
                   margin-right: 10px;
             }
             &__name-city{
+                  font-family: $font-familly-text;
                   text-align: center;
                   font-size: 25px;  
                   border: none;    
                   background-color: transparent;
-                  width: 10%;
-                  
-      }
+                  width: 10%;           
+            }
 } 
-      @media #{$tablette} {
-      .localisation__name-city {
-            width: 26%;
-      }
-}
-      @media #{$mobile} { 
-            .localisation { 
-            display: flex;
-            justify-content: center;        
-      }
-            .localisation__icon {  
-            padding-left: 10px;
-      }
-            .localisation__name-city{
-            width: 50%;
-      }
-      }
-      .info{  
-            text-align: center;
-      background-color: #f6f6f6;
-      padding:  50px 0;
-            &__button{
-                  border: $color-primary;
-                  box-shadow: 5px 5px 10px rgb(143, 142, 142);
-                  background: linear-gradient(to top, #9356DC,#FF79DA);
-                  padding: 20px 80px ;
-                  border-radius: 35px;
-                  color: white;
-                  font-size: 20px;
-                  font-family: $font-familly-text;
-                  cursor: pointer;
-                  transition: 0.3s;
-            }
-            &__button:hover{
-                  transform: scale(1.04);
-            }
-            @media #{$mobile}{
-                  
-                  &__button{
-                        font-size: 15px;
-                        padding: 18px 60px;
+                  @media #{$tablette} {
+                        .localisation__name-city {
+                        width: 26%;
                   }
-            }
+                  }
+                  @media #{$mobile} { 
+                        .localisation { 
+                        display: flex;
+                        justify-content: center;        
+                  }
+                        .localisation__icon {  
+                        padding-left: 10px;
+                  }
+                        .localisation__name-city{
+                        width: 50%;
+                  }
+                  }
+.info{  
+      text-align: center;
+      background-color: #f6f6f6;
+      padding:  25px 0;
+      &__book{
+            padding-bottom: 10px;
+      }
+      &__button{
+            border: $color-primary;
+            font-family: $font-familly-text;
+      }
 }
 .functioning{
-
+      font-family: $font-familly-text;
             &__title{
+                  padding: 25px 0;
                   text-align: center;
-                  padding: 10px 20px;
             }
             &__list{
                   display: flex;
@@ -130,112 +105,87 @@ p {
                   flex-wrap: wrap;
                   width: 100%;
             }
-            &__btn{
-                  position: relative;
-                  box-shadow: 5px 5px 10px rgb(199, 197, 197);
-                  padding: 20px;
-                  background-color: #f6f6f6;
-                 margin-right: 40px;
-                 margin-bottom: 20px;
-                  border-radius: 15px;
-                  cursor: pointer;
-                  width: 20%;
-                  text-align: center;
-            
-            }
             &__description {
                   font-size: 20px;
                   color: black;
+                  text-align: right;
+                  font-weight: bold;
             }
             &__icon{
-            color: gray;
-            padding-right: 20px;
-            font-size: $font-seize-icon;
-
-      } 
-      .functioning{
-            &__btn
-            &:hover{ 
-                  background-color: #f8e1f1;
-            &__icon:hover{ 
-                  color: $color-primary;
-            }
-      }
-}
-                
+                  color: gray;
+                  font-size: $font-seize-icon;
+                  padding: 0 40px;
+            } 
       ol {
             list-style: none;
+            counter-reset: compteListe;
+      }
+      li{
+            display: flex;
+            justify-content: space-evenly;
             
-            counter-reset: compteListe ;
       }
       ol li::before {
-            counter-increment: compteListe 1 ;
+            counter-increment: compteListe 1;
             content: counter(compteListe)" ";
             display: flex;
             justify-content: center;
             align-items: center;
             color: #fff;
             bottom: 1rem;
-            left: -20px;
-            height: 35px;
-            width: 35px;
+            left: -18px;
+            height: 30px;
+            width: 30px;
             position: absolute;            
             border-radius: 100%;
             background-color: #9356DC;
       }
-@media #{$tablette}{
-      &__btn{
-            width: 50%;
-            text-align: center;
-      }
-}
-      @media #{$mobile}{
-            .functioning__container {
-            display: flex ;
-            flex-direction: column ;
-            width:100%;
-      }
+      @media #{$tablette}{
             &__list{
-            display: flex;
-            flex-direction: row;
-            flex-wrap: wrap;
-            }
-            &__title{
-            text-align: start;
-            
+                  display: flex;
+                  justify-content: space-evenly;
             }
             &__btn{
-                  
-                 
-                  width: 80%;
-            }
-            &__description{
-                  font-size: 15px;
+                  width: 50%;
+                  display: flex;
+                  justify-content: center;
+                  align-items: center;
             }
             &__icon{
-            font-size: 15px;
+                  padding: 0 20px;
             }
       }
+      @media #{$mobile}{
+            &__title{
+                  text-align: left;
+                  padding-left: 15px;
+            }
+            &__btn{
+                  margin-left: 40px;
+                  width: 85%;
+            }
+            &__description{
+                  font-size: 17px;
+            }
+            &__icon{
+                  font-size: 20px;
+                  padding: 0 10px;
+            }  
+      }
 }
-
-
-
-
-
-
 .restaurants {
       background-color: #f6f6f6;
             &__title{
-                  padding: 40px 0;
+                  padding: 40px 0 20px 0;
                   text-align: center;
             }
             @media #{$mobile}{
                   &__title{
                         text-align: left;
-                        padding: 10px 20px;
+                        padding-left: 15px;
                   }
             }
-      }
+}
 .container-restaurants {
       display: flex;
       justify-content: space-around;
@@ -250,7 +200,7 @@ p {
       background-color: #f5f3f3;
       border-radius: 15px;
       width: 40%;
-      margin-bottom: 50px;
+      margin-bottom: 20px;
       transition: 0.3s;
       &:hover{
             transform: scale(1.03);
@@ -258,18 +208,20 @@ p {
       &__picture {
             position: relative;
             width: 100%;
-            height: 250px;
+            height: 220px;
             border-radius: 15px 15px 0 0 ;
             object-fit: cover;
       }
       &__new{
             display: flex;
-            border-radius: 10px;
+            border-radius: 4px;
             padding: 10px 20px;
             justify-content: end;
             position: absolute;
             background-color: #99E2D0;
-            color: rgb(11, 116, 107);
+            color: rgb(36, 136, 128);
+            font-family: $font-familly-text;
+            font-weight: bold;
             right: 16px;
             top: 16px;
       }
@@ -277,29 +229,26 @@ p {
             display: flex;
             flex-direction: column;            
             align-items: flex-start;            
-            padding: 0 15px;
+            padding: 15px ;
             color: black;
             position: relative; 
       }
       &__far {
-            transition-duration: .25s;
             font-size: 25px;
             position: absolute;
             right: 16px;
             bottom: 1rem;
             color: #9356DC;
-            display: none;
-            &__far:hover{
-                  color: #9356DC;
-                  border: solid red;
-            }
       }
       &__heart-regular{
             font-size: 25px;
             position: absolute;
             right: 16px;
             bottom: 1rem;
-            
+      }
+      &__city{
+            padding-top: 10px;
+            font-family: $font-familly-text;
       }
 }
 .card a{
@@ -311,19 +260,19 @@ p {
             flex-direction: column;
             width: 90%;
       }
-.card{
-width: 100%;
-}
-.picture{
-height: 150px;
-}
+      .card{
+            width: 100%;
+      }
+      .picture{
+            height: 150px;
+      }
 }
 @media #{$tablette} {
       .container-restaurants{
             width: 100%;
       }
       .card{
-            width: 46%;
+            width: 45%;
       }
 }
 .banner{
@@ -338,32 +287,50 @@ height: 150px;
       position: absolute;
       margin-left: auto;
       margin-right: auto;
+      margin-bottom: auto;
       justify-content: center;
       width: 80%;
       position: relative;
       background-color: #f6f6f6;
       border-radius: 25px 25px 0 0;
       bottom: 60px;
-      
             &__header{
                   display: flex;
                   justify-content: space-between;
-                  
                   align-items: center;
                   margin: 0 30px;
             }
             &__far {
                   font-size: 25px;
+                  position: absolute;
+                  padding-right: 20px;
             }
+            &__heart-regular{
+                  font-size: 25px;
+                  position: relative;
+                  left: 1.5rem;
+            }
+@media #{$mobile}{
+      width: 100%;
+}
 }
 .menu-container {
       display: flex;
       flex-direction: column;
-      justify-content: center;  
+      justify-content: center;
+}
+.menu-item h2{
+      font-weight: 300 ;
 }
 .menu-item {
       width: 50%;
       margin: auto;
+      @media #{$mobile}{
+            width: 95%;
+      }
+      @media #{$tablette}{
+            width: 70%;
+      }
 }
 .menu-item h2:after{
       content: "";
@@ -371,55 +338,52 @@ height: 150px;
       border-bottom: 5px solid#99E2D0;
       height: 10px;
       width: 60px;
-      
 }
 .submenu-item {
       display: flex;
       background-color: #f6f6f6;
       border-radius: 25px;
       box-shadow: 5px 5px 10px rgb(179, 178, 178);
-      margin-bottom: 10px;     
+      margin-bottom: 20px;  
+      margin-top: 20px;  
             &__choise {
                   overflow: hidden;
+                  white-space: nowrap;
+                  text-overflow: ellipsis;
                   width: 80%;
                   margin-left: 20px;
-                  padding: 0px ;
+                  padding: 15px 0 ;
             }
-            
+            &__text{
+                  font-family: $font-familly-text;
+                  padding-top: 10px;
+            }
             &__price {
                   display: flex;
+                  justify-content: flex-end;
+                  align-items: flex-end;
                   overflow: hidden;
-                  width: 100%;
                   margin: auto;
-                  
             }
             &__check-command{
-                  margin-left: auto;
-                  margin-top: auto;
-                  margin-bottom: auto;
+                  margin: 15px 0;
                   padding-right: 10px;
                   font-size: 40px;
                   color: #fff;
-                  
+                        &__check-command::after{ 
+                        display: block;
+                        content: "";
+                        justify-content: center;
+                        align-items: center;
+                        width: 10%;
+                        background-color: $color-tertiary; 
+            } 
             }
+}      
+      @media #{$mobile}{
+      .submenu-item {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+      }
 }
-.command-btn {
-display: flex;
-justify-content: center;
-      &__command{    
-            border: $color-primary;
-            background: linear-gradient(to top, #9356DC,#FF79DA);
-            padding: 20px 80px ;
-            border-radius: 35px;
-            color: white;
-            font-size: 20px;
-            font-family: $font-familly-text;
-            cursor: pointer;
-            margin: 50px 0;
-            transition: 0.3s;
-            &:hover{
-                  transform: scale(1.03);
-            }
-       }
-   }
- 

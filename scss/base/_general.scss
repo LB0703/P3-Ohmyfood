@@ -1,0 +1,35 @@
+$color-primary: #9356DC;
+$color-secondary: #FF79DA;
+$color-tertiary: #99E2D0;
+$font-familly-logo-title: "shrikhand", "cursive";
+$font-familly-text: "roboto", "cursive";
+$font-seize-icon : 25px;
+
+*{
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+}
+h1{
+      font-family: $font-familly-logo-title;
+}  
+      @media #{$mobile} {
+            h1{
+            font-size: 23px;
+            font-weight: 600;
+            }
+      }
+h2{
+      text-decoration: none;
+      font-family: $font-familly-text;
+      font-size: 23px;
+      font-weight: bold;
+}
+h3{
+      font-family: $font-familly-text;
+      font-size: 18px;
+}
+p {
+      font-family: $font-familly-text;
+      font-size: 18px;
+}

@@ -18,6 +18,8 @@ $font-familly-text: "roboto", "cursive";
       }
       &__button:hover{
             transform: scale(1.04);
+            background: linear-gradient(to top, #bc89fa,#f09dd8);
+            box-shadow: 5px 5px 10px rgb(158, 157, 157);
       }
             @media #{$mobile}{
                   &__button{
@@ -30,18 +32,21 @@ $font-familly-text: "roboto", "cursive";
       &__btn{
             position: relative;
             box-shadow: 5px 5px 10px rgb(199, 197, 197);
-            padding: 20px;
+            padding: 25px 0;
             background-color: #f6f6f6;
             margin-right: 40px;
             margin-bottom: 40px;
-            margin-top: 20px;
-            border-radius: 19px;
+            margin-top: 10px;
+            border-radius: 21px;
             cursor: pointer;
-            width: 20%;
+            width: 18%;
             text-align: center;
+            transition: 0.3s;
       }
       .functioning__btn:hover{
                   background-color: #f2eafd;
+                  transform: scale(1.04);
+                  
             .functioning__icon{ 
                   color: $color-primary;
             }
@@ -67,7 +72,9 @@ $font-familly-text: "roboto", "cursive";
                   margin: 50px 0;
                   transition: 0.3s;
                   &:hover{
-                        transform: scale(1.03);
+                        transform: scale(1.04);
+                        background: linear-gradient(to top, #bc89fa,#f09dd8);
+                        box-shadow: 5px 5px 10px rgb(158, 157, 157);
                   }
             }
       }

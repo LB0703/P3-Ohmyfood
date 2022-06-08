@@ -1,0 +1,16 @@
+.info{  
+      text-align: center;
+      background-color: #f6f6f6;
+      padding:  25px 0;
+      &__book{
+            padding: 20px 50px;
+      }
+      &__select{
+            padding: 0px 20px;
+            font-weight: 200;
+      }
+      &__button{
+            border: $color-primary;
+            font-family: $font-familly-text;
+      }
+}

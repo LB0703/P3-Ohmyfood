@@ -14,7 +14,7 @@
 <body>
       <div class="modal">
             <div class="spinner">
-                  
+
             </div>
       </div>
       <header>
@@ -26,7 +26,7 @@
             <!--localisation-->
       <form class="localisation">
             <i class="fa-solid fa-location-dot localisation__icon"></i>
-            <input class="localisation__name-city" placeholder="Entrer votre ville" value="Paris, Bellevue">
+            <input class="localisation__name-city" type="search" placeholder="entrez votre ville" value="Paris, Belleville">
             
       </form>
       <section class="info">
@@ -61,14 +61,16 @@
             </div>
             <div class="container-restaurants">
                   <article class="card">
-                        <a href="/la-palette-du gout.html">
+                        <a href="/la-palette-du-gout.html">
                         <img class="card__picture" src="./images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="La palette du goût">
                         <span class="card__new">Nouveau</span>
                         <div class="card__description">
                               <h3>La palette du goût</h3>
                               <p class="card__city">Ménilmmontant</p>
-                              <i class="card__heart-regular fa-regular fa-heart"></i>
-                              <i class="card__far fa-heart fa"></i>
+                              <div class="card__heart">  
+                                    <i class="card__heart-regular fa-regular fa-heart"></i>
+                                    <i class="card__far fa-heart fa"></i>
+                              </div>
                         </div>
                   </a>  
                   </article>  
@@ -79,8 +81,10 @@
                         <div class="card__description">
                               <h3>La note enchantée</h3>
                               <p class="card__city">Charonne</p>
-                              <i class="card__heart-regular fa-regular fa-heart"></i>
-                              <i class="card__far fa-heart fa"></i>
+                              <div class="card__heart">
+                                    <i class="card__heart-regular fa-regular fa-heart"></i>
+                                    <i class="card__far fa-heart fa"></i>
+                              </div>
                         </div>
                   </a> 
                   </article>
@@ -90,8 +94,10 @@
                         <div class="card__description">
                               <h3>À la française</h3>
                               <p class="card__city" >Cité Rouge</p>
-                              <i class="card__heart-regular fa-regular fa-heart"></i>
-                              <i class="card__far fa-heart fa"></i>
+                              <div class="card__heart">
+                                    <i class="card__heart-regular fa-regular fa-heart"></i>
+                                    <i class="card__far fa-heart fa"></i>
+                              </div>
                         </div>
                   </a>
                   </article>
@@ -101,8 +107,10 @@
                         <div class="card__description">
                               <h3>Le délice des sens</h3>
                               <p class="card__city">Folie-Méricourt</p>
-                              <i class="card__heart-regular fa-regular fa-heart"></i>
-                              <i class="card__far fa-heart fa"></i>
+                              <div class="card__heart">
+                                    <i class="card__heart-regular fa-regular fa-heart"></i>
+                                    <i class="card__far fa-heart fa"></i>
+                              </div>
                         </div>
                   </a> 
                   </article>
@@ -116,22 +124,18 @@
             </div>
             <ul class="footer__list">
                   <li class="footer__element">
-                        <i class="fa-solid fa-utensils"></i>
-                        <a href="#">
-                        <p class="footer__text">Proposer un restaurant</p></a>
+                        <i class="footer__cutlery fa-solid fa-utensils"></i>
+                        <a class="footer__text" href="#">Proposer un restaurant</a>
                   </li>
                   <li class="footer__element">
-                        <i class="fa-solid fa-handshake-angle"></i>
-                        <a href="#">
-                        <p class="footer__text">Devenir partenaire</p></a>
+                        <i class="footer__hands fa-solid fa-handshake-angle"></i>
+                        <a class="footer__text" href="#">Devenir partenaire</a>
                   </li>
                   <li class="footer__element">
-                        <a href="#">
-                        <p class="footer__text">Mentions légales</p></a>
+                        <a class="footer__text" href="#">Mentions légales</a>
                   </li>
                   <li class="footer__element">
-                        <a href="#">
-                        <p class="footer__text" >Contact</p></a>
+                        <a class="footer__text" href="#">Contact</a>
                   </li>
             </ul>
       </div>

@@ -1,0 +1,85 @@
+.functioning{
+      font-family: $font-familly-text;
+      margin-bottom: 50px;
+            &__title{
+                  padding-top: 40px;
+                  text-align: center;
+                  
+            }
+            &__list{
+                  display: flex;
+                  justify-content: center;
+                  flex-wrap: wrap;
+                  width: 100%;
+                  margin-top: 15px;
+            }
+            &__description {
+                  font-size: 17px;
+                  color: black;
+                  text-align: right;
+                  font-weight: bold;
+                  
+            }
+            &__icon{
+                  color: gray;
+                  font-size: $font-seize-icon;
+                  padding: 0 40px;
+            } 
+      ol {
+            list-style: none;
+            counter-reset: compteListe;
+      }
+      li{
+            display: flex;
+            justify-content: center;
+            
+      }
+      ol li::before {
+            counter-increment: compteListe 1;
+            content: counter(compteListe)" ";
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #fff;
+            bottom: 1.3rem;
+            left: -12px;
+            height: 24px;
+            width: 24px;
+            font-size: 13px;
+            position: absolute;            
+            border-radius: 100%;
+            background-color: #9356DC;
+      }
+      @media #{$tablette}{
+            &__list{
+                  display: flex;
+                  justify-content: space-evenly;
+            }
+            &__btn{
+                  width: 50%;
+                  display: flex;
+                  justify-content: center;
+                  align-items: center;
+            }
+            &__icon{
+                  padding: 0 20px;
+            }
+      }
+      @media #{$mobile}{
+            &__title{
+                  text-align: left;
+                  padding-left: 15px;
+            }
+            &__btn{
+                  margin-left: 40px;
+                  width: 85%;
+            }
+            &__description{
+                  font-size: 15px;
+            }
+            &__icon{
+                  font-size: 17px;
+                  padding: 0 10px;
+            }  
+      }
+}

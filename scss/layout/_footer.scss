@@ -2,8 +2,10 @@
       background-color: #302e2e;
       display: block;
       padding: 25px 0 25px 30px;
+      
+      
             &__logo {
-            font-size: 30px;
+            font-size: 25px;
             font-family: "shrikhand", "cursive";
             color: white;
             }
@@ -11,7 +13,7 @@
             color: white;
             display: flex;
             flex-direction: column ;
-            padding: 15px 0;
+            padding: 5px 0;
             }
             &__element{ 
             display: flex;
@@ -20,12 +22,18 @@
             align-items: center;
             text-decoration: none;
             font-size: 20px;
-            margin: 10px 0;
+            margin: 3px 0;
             }
             &__text{
-                  padding-left: 0px;
+                  
                   color: white;
                   text-decoration: none;
+            }
+            &__cutlery{
+                  padding-right: 20px;
+            }
+            &__hands{
+                  padding-right: 15px;
             }
             a{
                   text-decoration: none;
@@ -35,9 +43,11 @@
                   transform: scale(1.03);
             }
             li i{
-                  display: flex;    
+                  display: flex;  
+                  font-size: 15px; 
+            }
+            li {
+                  padding-top: 5px;
             }
 }
-.footer i{
-      padding-right: 20px;
-}
+

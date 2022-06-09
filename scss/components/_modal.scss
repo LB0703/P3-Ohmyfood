@@ -7,25 +7,27 @@ height: 100%;
 background-color: rgba(255,255,255,0.90);
 z-index: 10000;
 opacity: 0.9;
-animation: modal 4s;
+animation: modal ;
+animation-delay: 2s;
+animation-duration: 1s;
 animation-fill-mode: both;
-animation-delay: 3s;
-animation-duration: 3s;
-animation-timing-function: ease-in-out 5s;
+animation-timing-function: 1;
 }
-
 @keyframes modal {
 100%{
       opacity: 0;
       z-index: 1;
-      transform: scale(0);
+      visibility: hidden;
 }
 }
-
 .spinner{
-      background-image:linear-gradient(to top, #9356DC,#FF79DA) ;
       width: 200px;
       height: 200px;
+      border-top: 15px solid#7225d1;
+      border-bottom: 15px solid#FF79DA;
+      border-left: 5px solid#99E2D0;
+      border-right: 5px solid#99E2D0;
+      border-radius: 100%;
       display: inline-block;
       position: absolute;
       top: 0;
@@ -33,12 +35,10 @@ animation-timing-function: ease-in-out 5s;
       bottom: 0;
       right: 0;
       margin: auto;
-      border-radius: 25%;
-      animation: rotation 2s linear;
+      animation: rotation;
       animation-duration: 1s;
-      animation-timing-function: 1s;
+      animation-timing-function: ease-in-out;
       animation-iteration-count: 3;
-
       @keyframes rotation {
             from{
                   transform: rotate(0deg);

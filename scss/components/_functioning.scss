@@ -1,10 +1,8 @@
 .functioning{
-      font-family: $font-familly-text;
       margin-bottom: 50px;
             &__title{
                   padding-top: 40px;
-                  text-align: center;
-                  
+                  text-align: center;  
             }
             &__list{
                   display: flex;
@@ -18,7 +16,6 @@
                   color: black;
                   text-align: right;
                   font-weight: bold;
-                  
             }
             &__icon{
                   color: gray;
@@ -31,8 +28,7 @@
       }
       li{
             display: flex;
-            justify-content: center;
-            
+            justify-content: space-around;
       }
       ol li::before {
             counter-increment: compteListe 1;
@@ -49,6 +45,18 @@
             position: absolute;            
             border-radius: 100%;
             background-color: #9356DC;
+      }
+      @media #{$desktop}{
+            &__list{
+                  display: flex;
+                  justify-content: space-evenly;
+            }
+            &__btn{
+                  width: 30%;
+                  display: flex;
+                  justify-content: center;
+                  align-items: center;
+            }
       }
       @media #{$tablette}{
             &__list{

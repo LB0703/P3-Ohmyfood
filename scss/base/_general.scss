@@ -9,8 +9,9 @@ $font-seize-icon : 25px;
       box-sizing: border-box;
       margin: 0;
       padding: 0;
+      font-family: $font-familly-text;
 }
-h1{
+h1{ 
       font-family: $font-familly-logo-title;
 }  
       @media #{$mobile} {
@@ -19,17 +20,14 @@ h1{
             font-weight: 600;
             }
       }
-h2{
+h2{ 
       text-decoration: none;
-      font-family: $font-familly-text;
       font-size: 23px;
       font-weight: bold;
 }
 h3{
-      font-family: $font-familly-text;
       font-size: 18px;
 }
 p {
-      font-family: $font-familly-text;
       font-size: 18px;
 }

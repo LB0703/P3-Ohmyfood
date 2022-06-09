@@ -1,16 +1,17 @@
 @import "utils/normalize";
 @import "utils/responsive";
 @import "base/general";
+@import "utils/variables";
 @import "utils/animations";
-@import "layout/footer";
-@import "layout/header";
+@import "layouts/footer";
+@import "layouts/header";
 @import "components/buttons";
-@import "pages/modale";
-@import "pages/home-cards-restaurants";
+@import "components/modal";
+@import "components/cards";
 @import "pages/restaurants";
-@import "pages/localisation";
-@import "pages/info";
-@import "pages/functioning";
+@import "components/localisation";
+@import "components/info";
+@import "components/functioning";
 
 
 

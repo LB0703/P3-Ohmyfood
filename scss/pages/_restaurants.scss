@@ -87,8 +87,13 @@
       margin-bottom: 20px;  
       margin-top: 20px; 
       cursor: pointer;
-      animation: display-menu both 3s;
-      animation-delay: 10ms;
+      overflow: hidden;
+      animation: display-menu 3s ease-in-out;
+
+      
+      @for $i from 1 through 10 {
+            .submenu-item-#{$i} { animation-delay : 0.25s * $i;}
+      }
             &__choise {
                   margin-left: 20px;
                   padding: 15px 0 ;

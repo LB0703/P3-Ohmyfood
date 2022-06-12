@@ -388,18 +388,10 @@ p {
 }
 @keyframes check-section {
   from {
+    transform: translateX(100px);
+  }
+  to {
     transform: translateX(0px);
-  }
-  to {
-    transform: translateX(-120px);
-  }
-}
-@keyframes price {
-  from {
-    transform: translateX(150px);
-  }
-  to {
-    transform: translateX(-120px);
   }
 }
 .footer {
@@ -570,7 +562,6 @@ p {
   animation-delay: 2s;
   animation-duration: 1s;
   animation-fill-mode: both;
-  animation-timing-function: 1;
 }
 
 @keyframes modal {
@@ -593,12 +584,11 @@ p {
   margin: auto;
   color: #9356DC;
   font-weight: 200;
-  font-size: 40px;
+  font-size: 20px;
   animation: deco;
-  animation-delay: 0.1s;
-  animation-duration: 2s;
-  animation-timing-function: ease-out;
-  animation-iteration-count: 1;
+  animation-delay: 0s;
+  animation-duration: 3s;
+  animation-timing-function: linear;
 }
 @keyframes deco {
   0% {
@@ -628,9 +618,9 @@ p {
   right: 0;
   margin: auto;
   animation: rotation;
+  animation-delay: 0s;
   animation-duration: 2s;
-  animation-timing-function: ease-in-out;
-  animation-iteration-count: 1;
+  animation-timing-function: linear;
 }
 @keyframes rotation {
   from {
@@ -789,7 +779,12 @@ p {
   justify-content: space-between;
   align-items: center;
   position: relative;
-  padding: 20px 20px;
+  padding: 20px 30px;
+}
+@media only screen and (max-width:767px) {
+  .menu__header {
+    padding: 20px 20px;
+  }
 }
 .menu__heart {
   cursor: pointer;
@@ -821,26 +816,38 @@ p {
 }
 .menu .menu-container {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: center;
+}
+@media only screen and (max-width:767px) {
+  .menu .menu-container {
+    flex-direction: column;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 1000px) {
+  .menu .menu-container {
+    flex-direction: column;
+  }
 }
 .menu .menu-item h2 {
   font-weight: 400;
   font-size: 17px;
 }
 .menu .menu-item {
-  margin: auto;
+  margin: 0 30px;
   margin-top: 20px;
   width: 50%;
 }
 @media only screen and (max-width:767px) {
   .menu .menu-item {
-    width: 95%;
+    width: 90%;
+    margin: 0 20px;
   }
 }
 @media only screen and (min-width: 768px) and (max-width: 1000px) {
   .menu .menu-item {
     width: 70%;
+    margin: auto;
   }
 }
 .menu .menu-item h2:after {
@@ -860,6 +867,8 @@ p {
   margin-top: 20px;
   cursor: pointer;
   overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
   animation: display-menu 3s;
   animation-fill-mode: both;
 }
@@ -896,8 +905,16 @@ p {
 .menu .menu-item .submenu-item .menu-item .submenu-item .delay-10 {
   animation-delay: 5s;
 }
+.menu .menu-item .submenu-item h3 {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
 .menu .menu-item .submenu-item__choise {
-  margin-left: 20px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  margin-left: 15px;
   padding: 15px 0;
 }
 @media only screen and (max-width:767px) {
@@ -911,14 +928,12 @@ p {
   white-space: nowrap;
   text-overflow: ellipsis;
   font-family: "roboto", "cursive";
-  padding-top: 10px;
+  padding-top: 5px;
+  padding-right: 5px;
 }
 @media only screen and (max-width:767px) {
   .menu .menu-item .submenu-item__text {
     font-size: 15px;
-  }
-  .menu .menu-item .submenu-item__text:hover {
-    transform: translateX(-120px);
   }
 }
 .menu .menu-item .submenu-item__price {
@@ -932,6 +947,7 @@ p {
 @media only screen and (max-width:767px) {
   .menu .menu-item .submenu-item__price {
     font-size: 15px;
+    padding-right: 15px;
   }
 }
 .menu .menu-item .submenu-item__check-command {
@@ -939,25 +955,25 @@ p {
   justify-content: center;
   align-items: center;
   background-color: #99E2D0;
-  width: 120px;
+  width: 100px;
   border-radius: 0 15px 15px 0;
   color: white;
   font-size: 30px;
   cursor: pointer;
-  opacity: 0;
+  opacity: 1;
   text-align: center;
-  transition: transform 600ms;
-  margin-right: -120px;
+  margin-right: -100px;
   margin-left: 20px;
-  animation: check-section;
-  animation-delay: 3s;
-  animation-duration: 3s;
-  transition: 1s;
-  animation-timing-function: ease-in;
+  animation-name: check-section;
+  animation-delay: 0s;
+  animation-iteration-count: 1;
+  animation-duration: 2s;
+  animation-direction: normal;
+  animation-fill-mode: both;
 }
 .menu .menu-item .submenu-item:hover .submenu-item__check-command {
   opacity: 1;
-  transition: transform 1s ease-in-out;
+  margin-right: 0px;
 }
 .menu .menu-item .submenu-item:hover .submenu-item__check-command i {
   animation: check 1s linear;
@@ -967,8 +983,10 @@ p {
   .menu .submenu-item__check-command {
     width: 100px;
   }
-  .menu .submenu-item h3:hover {
-    transform: translateX(-80px);
+  .menu .submenu-item h3__choise {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
   }
 }
 

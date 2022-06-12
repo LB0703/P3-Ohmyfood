@@ -23,7 +23,10 @@
                   justify-content: space-between;
                   align-items: center;
                   position: relative;
-                  padding: 20px 20px;
+                  padding: 20px 30px;
+                  @media #{$mobile}{
+                        padding: 20px 20px;
+                  }
             }
             &__heart{
                   cursor: pointer;
@@ -55,23 +58,32 @@
             }
 .menu-container {
       display: flex;
-      flex-direction: column;
+      flex-direction: row;
       justify-content: center;
+      @media #{$mobile}{
+            flex-direction: column;
+      }
+      @media #{$tablette}{
+            flex-direction: column;
+      }
 }
 .menu-item h2{
       font-weight: 400 ;
       font-size: 17px;
 }
 .menu-item {
-      margin: auto;
+      margin: 0 30px;
       margin-top: 20px;      
       width: 50%;
       @media #{$mobile}{
-            width: 95%;
+            width: 90%;
+            margin: 0 20px;
       }
       @media #{$tablette}{
             width: 70%;
+            margin: auto;
       }
+
 }
 .menu-item h2:after{
       content: "";
@@ -91,6 +103,8 @@
       margin-top: 20px; 
       cursor: pointer;
       overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
       animation: display-menu 3s ;
       animation-fill-mode: both;
       @for $i from 0 through 10 {
@@ -98,9 +112,16 @@
                   animation-delay: 0.5s * $i;
             }
       }
-
+h3{
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+}
             &__choise {
-                  margin-left: 20px;
+                  overflow: hidden;
+                  white-space: nowrap;
+                  text-overflow: ellipsis;
+                  margin-left: 15px;
                   padding: 15px 0 ;
                         @media #{$mobile}{
                               width: 100%;
@@ -112,12 +133,10 @@
                   white-space: nowrap;
                   text-overflow: ellipsis;
                   font-family: $font-familly-text;
-                  padding-top: 10px;
+                  padding-top: 5px;
+                  padding-right: 5px;
                         @media #{$mobile}{
                               font-size: 15px;
-                              &:hover{
-                                    transform: translateX(-120px);  
-                              }
                         }
             }
             &__price {
@@ -129,6 +148,7 @@
                   font-weight: bold;
                         @media #{$mobile}{
                               font-size: 15px;
+                              padding-right: 15px;
                         }
             }
             &__check-command {
@@ -136,38 +156,35 @@
                   justify-content: center;
                   align-items: center;
                   background-color: $color-tertiary;
-                  width: 120px;
+                  width: 100px;
                   border-radius: 0 15px 15px 0;
                   color: white;
                   font-size: 30px;
                   cursor: pointer;
-                  opacity: 0;
+                  opacity: 1;
                   text-align: center;
-                  transition: transform 600ms;
-                  margin-right: -120px ;
+                  margin-right: -100px;
                   margin-left: 20px;
-                  animation: check-section;
-                  animation-delay: 3s;
-                  animation-duration: 3s;
-                  transition: 1s;
-                                   animation-timing-function: ease-in;
-                                   
-                  
+                  animation-name: check-section;
+                  animation-delay: 0s;
+                  animation-iteration-count: 1;
+                  animation-duration: 2s;
+                  animation-direction: normal;
+                  animation-fill-mode: both;
                   
             }      
                         &:hover {
                               .submenu-item__check-command{ 
                                     opacity: 1;
-                                    transition: transform 1s ease-in-out;
-                                  
+                                    margin-right: 0px;
                                    
                                     
+
                               i{
                                     animation: check 1s linear;
                                     transition: transform 600ms;
                               }
                               }
-                          
                         }
 }
       @media #{$mobile} {
@@ -175,8 +192,11 @@
                   width: 100px;
             }
             .submenu-item h3{
-                        &:hover{
-                              transform: translateX(-80px);
+                        
+                        &__choise{
+                              overflow: hidden;
+                              white-space: nowrap;
+                              text-overflow: ellipsis; 
                         }
             }
       

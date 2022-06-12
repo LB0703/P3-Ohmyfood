@@ -22,17 +22,9 @@ opacity: 1;
 }
 @keyframes check-section{  
 from{
-      transform: translateX(0px);
+      transform: translateX(100px);
 }
 to{
-      transform: translateX(-120px); 
+      transform: translateX(0px); 
 }
-}
-@keyframes price {
-      from{
-transform: translateX(150px);
-      }
-      to{
-transform: translateX(-120px);
-      }
 }

@@ -13,6 +13,7 @@ animation-duration: 1s;
 animation-fill-mode: both;
 animation-timing-function: 1;
 }
+
 @keyframes modal {
 100%{
       opacity: 0;
@@ -20,11 +21,43 @@ animation-timing-function: 1;
       visibility: hidden;
 }
 }
+.deco{
+      font-family:  $font-familly-logo-title;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      margin: auto;
+      color: $color-primary;
+      font-weight: 200;
+      font-size: 40px;
+      animation: deco ;
+      animation-delay: 0.1s;
+      animation-duration: 2s;
+      animation-timing-function: ease-out;
+      animation-iteration-count: 1;
+      @keyframes deco {
+            0%{
+                  transform: scale(3);
+            }
+            50%{
+                  transform: scale(2);
+            }
+            100%{
+                  transform: scale(1);
+            }
+      }
+}
+
 .spinner{
       width: 200px;
       height: 200px;
-      border-top: 15px solid#7225d1;
-      border-bottom: 15px solid#FF79DA;
+      border-top: 20px solid#7225d1;
+      border-bottom: 20px solid#FF79DA;
       border-left: 5px solid#99E2D0;
       border-right: 5px solid#99E2D0;
       border-radius: 100%;
@@ -36,9 +69,9 @@ animation-timing-function: 1;
       right: 0;
       margin: auto;
       animation: rotation;
-      animation-duration: 1s;
+      animation-duration: 2s;
       animation-timing-function: ease-in-out;
-      animation-iteration-count: 3;
+      animation-iteration-count: 1;
       @keyframes rotation {
             from{
                   transform: rotate(0deg);
@@ -47,4 +80,5 @@ animation-timing-function: 1;
                   transform: rotate(360deg); 
             }
       }
+     
 }

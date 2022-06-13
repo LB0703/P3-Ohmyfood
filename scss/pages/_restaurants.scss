@@ -93,7 +93,7 @@
       width: 45px;
 }
 
-.menu-item .submenu-item {
+.submenu-item {
       display: flex;
       justify-content: space-between;
       background-color: white;
@@ -108,7 +108,7 @@
       animation: display-menu 3s ;
       animation-fill-mode: both;
       @for $i from 0 through 10 {
-            .menu-item .submenu-item .delay-#{$i}{  
+            .delay-#{$i}{  
                   animation-delay: 0.5s * $i;
             }
       }
@@ -134,7 +134,7 @@ h3{
                   text-overflow: ellipsis;
                   font-family: $font-familly-text;
                   padding-top: 5px;
-                  padding-right: 5px;
+                  padding-right                          : 5px;
                         @media #{$mobile}{
                               font-size: 15px;
                         }
@@ -176,9 +176,7 @@ h3{
                         &:hover {
                               .submenu-item__check-command{ 
                                     opacity: 1;
-                                    margin-right: 0px;
-                                   
-                                    
+                                    margin-right: 0px; 
 
                               i{
                                     animation: check 1s linear;

@@ -857,7 +857,7 @@ p {
   height: 6px;
   width: 45px;
 }
-.menu .menu-item .submenu-item {
+.menu .submenu-item {
   display: flex;
   justify-content: space-between;
   background-color: white;
@@ -872,45 +872,45 @@ p {
   animation: display-menu 3s;
   animation-fill-mode: both;
 }
-.menu .menu-item .submenu-item .menu-item .submenu-item .delay-0 {
+.menu .submenu-item .delay-0 {
   animation-delay: 0s;
 }
-.menu .menu-item .submenu-item .menu-item .submenu-item .delay-1 {
+.menu .submenu-item .delay-1 {
   animation-delay: 0.5s;
 }
-.menu .menu-item .submenu-item .menu-item .submenu-item .delay-2 {
+.menu .submenu-item .delay-2 {
   animation-delay: 1s;
 }
-.menu .menu-item .submenu-item .menu-item .submenu-item .delay-3 {
+.menu .submenu-item .delay-3 {
   animation-delay: 1.5s;
 }
-.menu .menu-item .submenu-item .menu-item .submenu-item .delay-4 {
+.menu .submenu-item .delay-4 {
   animation-delay: 2s;
 }
-.menu .menu-item .submenu-item .menu-item .submenu-item .delay-5 {
+.menu .submenu-item .delay-5 {
   animation-delay: 2.5s;
 }
-.menu .menu-item .submenu-item .menu-item .submenu-item .delay-6 {
+.menu .submenu-item .delay-6 {
   animation-delay: 3s;
 }
-.menu .menu-item .submenu-item .menu-item .submenu-item .delay-7 {
+.menu .submenu-item .delay-7 {
   animation-delay: 3.5s;
 }
-.menu .menu-item .submenu-item .menu-item .submenu-item .delay-8 {
+.menu .submenu-item .delay-8 {
   animation-delay: 4s;
 }
-.menu .menu-item .submenu-item .menu-item .submenu-item .delay-9 {
+.menu .submenu-item .delay-9 {
   animation-delay: 4.5s;
 }
-.menu .menu-item .submenu-item .menu-item .submenu-item .delay-10 {
+.menu .submenu-item .delay-10 {
   animation-delay: 5s;
 }
-.menu .menu-item .submenu-item h3 {
+.menu .submenu-item h3 {
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
 }
-.menu .menu-item .submenu-item__choise {
+.menu .submenu-item__choise {
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
@@ -918,12 +918,12 @@ p {
   padding: 15px 0;
 }
 @media only screen and (max-width:767px) {
-  .menu .menu-item .submenu-item__choise {
+  .menu .submenu-item__choise {
     width: 100%;
     font-size: 16px;
   }
 }
-.menu .menu-item .submenu-item__text {
+.menu .submenu-item__text {
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
@@ -932,11 +932,11 @@ p {
   padding-right: 5px;
 }
 @media only screen and (max-width:767px) {
-  .menu .menu-item .submenu-item__text {
+  .menu .submenu-item__text {
     font-size: 15px;
   }
 }
-.menu .menu-item .submenu-item__price {
+.menu .submenu-item__price {
   display: flex;
   justify-content: flex-end;
   align-items: flex-end;
@@ -945,12 +945,12 @@ p {
   font-weight: bold;
 }
 @media only screen and (max-width:767px) {
-  .menu .menu-item .submenu-item__price {
+  .menu .submenu-item__price {
     font-size: 15px;
     padding-right: 15px;
   }
 }
-.menu .menu-item .submenu-item__check-command {
+.menu .submenu-item__check-command {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -971,11 +971,11 @@ p {
   animation-direction: normal;
   animation-fill-mode: both;
 }
-.menu .menu-item .submenu-item:hover .submenu-item__check-command {
+.menu .submenu-item:hover .submenu-item__check-command {
   opacity: 1;
   margin-right: 0px;
 }
-.menu .menu-item .submenu-item:hover .submenu-item__check-command i {
+.menu .submenu-item:hover .submenu-item__check-command i {
   animation: check 1s linear;
   transition: transform 600ms;
 }

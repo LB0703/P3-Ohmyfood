@@ -27,6 +27,7 @@
                   @media #{$mobile}{
                         padding: 20px 20px;
                   }
+                 
             }
             &__heart{
                   cursor: pointer;
@@ -105,11 +106,11 @@
       overflow: hidden;
       white-space: nowrap;
       text-overflow: ellipsis;
-      animation: display-menu 3s ;
+      animation: display-menu 2s ;
       animation-fill-mode: both;
       @for $i from 0 through 10 {
-            .delay-#{$i}{  
-                  animation-delay: 0.5s * $i;
+            &.delay-#{$i}{  
+                  animation-delay: 0.2s * $i;
             }
       }
 h3{
@@ -168,7 +169,7 @@ h3{
                   animation-name: check-section;
                   animation-delay: 0s;
                   animation-iteration-count: 1;
-                  animation-duration: 2s;
+                  animation-duration: 3s;
                   animation-direction: normal;
                   animation-fill-mode: both;
                   
@@ -177,7 +178,8 @@ h3{
                               .submenu-item__check-command{ 
                                     opacity: 1;
                                     margin-right: 0px; 
-
+                                    transition-duration:  1s;   
+                                                               
                               i{
                                     animation: check 1s linear;
                                     transition: transform 600ms;

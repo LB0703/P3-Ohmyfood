@@ -25,17 +25,17 @@
                   @media #{$tablette} {
                         .localisation__name-city {
                         width: 26%;
-                  }
+                        }
                   }
                   @media #{$mobile} { 
                         .localisation { 
                         display: flex;
                         justify-content: center;        
-                  }
+                        }
                         .localisation__icon {  
                         padding-left: 10px;
-                  }
+                        }     
                         .localisation__name-city{
                         width: 50%;
-                  }
+                        }
                   }

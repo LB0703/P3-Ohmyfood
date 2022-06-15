@@ -1,9 +1,3 @@
-$color-primary: #9356DC;
-$color-secondary: #FF79DA;
-$color-tertiary: #99E2D0;
-
-
-
 .header {
       text-align: center;
       display: block;
@@ -13,7 +7,7 @@ $color-tertiary: #99E2D0;
             font-family: "shrikhand", "cursive";
             width: 230px;
             margin: 20px 0;
-      }
+            }
             &__harrow{
             position: absolute;
             display: flex;
@@ -24,14 +18,11 @@ $color-tertiary: #99E2D0;
             margin-top: 30px;
             margin-left: 20px;
             color: black;
-}
+            }
             &__harrow:hover{
             color: $color-primary;
-      }
-@media #{$mobile} {
-      width: 100%;
-}
-
-
-
+            }           
+                  @media #{$mobile} {
+                        width: 100%;
+                  }
 }

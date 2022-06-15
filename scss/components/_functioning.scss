@@ -46,56 +46,56 @@
             border-radius: 100%;
             background-color: #9356DC;
       }
-      @media #{$desktop}{
-            &__list{
-                  display: flex;
-                  justify-content: space-evenly;
+            @media #{$desktop}{
+                  &__list{
+                        display: flex;
+                        justify-content: space-evenly;
+                  }
+                  &__btn{
+                        width: 30%;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                  }
             }
-            &__btn{
-                  width: 30%;
-                  display: flex;
-                  justify-content: center;
-                  align-items: center;
+            @media #{$tablette}{
+                  li{
+                        display: flex;
+                        justify-content: space-around;
+                  }
+                  &__list{
+                        display: flex;
+                        justify-content: space-evenly;
+                  }
+                  &__btn{
+                        width: 50%;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                  }
+                  &__icon{
+                        padding: 0 20px;
+                  }
             }
-      }
-      @media #{$tablette}{
-            li{
-                  display: flex;
-                  justify-content: space-around;
+            @media #{$mobile}{
+                  li{
+                        display: flex;
+                        justify-content: space-around;
+                  }
+                  &__title{
+                        text-align: left;
+                        padding-left: 15px;
+                  }
+                  &__btn{
+                        margin-left: 40px;
+                        width: 85%;
+                  }
+                  &__description{
+                        font-size: 15px;
+                  }
+                  &__icon{
+                        font-size: 17px;
+                        padding: 0 10px;
+                  }  
             }
-            &__list{
-                  display: flex;
-                  justify-content: space-evenly;
-            }
-            &__btn{
-                  width: 50%;
-                  display: flex;
-                  justify-content: center;
-                  align-items: center;
-            }
-            &__icon{
-                  padding: 0 20px;
-            }
-      }
-      @media #{$mobile}{
-            li{
-                  display: flex;
-                  justify-content: space-around;
-            }
-            &__title{
-                  text-align: left;
-                  padding-left: 15px;
-            }
-            &__btn{
-                  margin-left: 40px;
-                  width: 85%;
-            }
-            &__description{
-                  font-size: 15px;
-            }
-            &__icon{
-                  font-size: 17px;
-                  padding: 0 10px;
-            }  
-      }
 }

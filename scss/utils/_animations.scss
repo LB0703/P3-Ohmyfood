@@ -1,15 +1,40 @@
-@keyframes display-menu {
+@keyframes modal {      
+      100%{
+            opacity: 0;
+            z-index: 1;
+            visibility: hidden;
+      }
+}
+@keyframes deco {
       0%{
-transform: translateY(50px);
-opacity: 0;
+            transform: scale(3);
+      }
+      50%{
+            transform: scale(2);
       }
       100%{
-transform: translateY(0px);
-opacity: 1;
-
+            transform: scale(1);
+      }
+}
+@keyframes rotation {
+      from{
+            transform: rotate(0deg);
+      }
+      to{
+            transform: rotate(360deg); 
       }
 }
 
+@keyframes display-menu {
+      0%{
+            transform: translateY(50px);
+            opacity: 0;
+      }
+      100%{
+            transform: translateY(0px);
+            opacity: 1;
+      }
+}
 
 @keyframes check{
       from{
@@ -20,11 +45,12 @@ opacity: 1;
       }
 
 }
-@keyframes check-section{  
-from{
-      transform: translateX(100px);
-}
-to{
-      transform: translateX(0px); 
-}
+
+@keyframes check-section {  
+      from{
+            transform: translateX(100px);
+      }
+      to{
+            transform: translateX(0px); 
+      }
 }

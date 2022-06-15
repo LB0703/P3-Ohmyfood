@@ -2,14 +2,11 @@
       background-color: #302e2e;
       display: block;
       padding: 25px 0 25px 30px;
-      
-      
             &__logo h4 {
             font-size: 25px;
             font-family: "shrikhand", "cursive";
             color: white;
             font-weight: normal;
-            
             }
             &__list{
             color: white;
@@ -27,7 +24,6 @@
             margin: 3px 0;
             }
             &__text{
-                  
                   color: white;
                   text-decoration: none;
             }
@@ -41,9 +37,9 @@
                   text-decoration: none;
                   text-align: left;
             }
-            a:hover{
-                  transform: scale(1.03);
-            }
+                  a:hover{
+                        transform: scale(1.03);
+                  }
             li i{
                   display: flex;  
                   font-size: 15px; 

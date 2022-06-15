@@ -1,8 +1,3 @@
-$color-primary: #9356DC;
-$color-secondary: #FF79DA;
-$color-tertiary: #99E2D0;
-$font-familly-logo-title: "shrikhand", "cursive";
-$font-familly-text: "roboto", "cursive";
 .info{   
       &__button{
             box-shadow: 5px 5px 10px rgb(199, 197, 197);
@@ -10,7 +5,7 @@ $font-familly-text: "roboto", "cursive";
             padding: 20px 50px ;
             margin-top: 20px;
             margin-bottom: 20px;
-            border-radius: 35px;
+            @include border-radius (35px);
             color: white;
             font-size: 20px;
             cursor: pointer;
@@ -21,12 +16,12 @@ $font-familly-text: "roboto", "cursive";
             background: linear-gradient(to top, #bc89fa,#f09dd8);
             box-shadow: 5px 5px 10px rgb(158, 157, 157);
       }
-            @media #{$mobile}{
-                  &__button{
-                  font-size: 15px;
-                  padding: 18px 30px;
+                  @media #{$mobile}{
+                        &__button{
+                        font-size: 15px;
+                        padding: 18px 30px;
+                        }
                   }
-            }
 }
 .functioning{
       &__btn{
@@ -37,7 +32,7 @@ $font-familly-text: "roboto", "cursive";
             margin-right: 40px;
             margin-bottom: 40px;
             margin-top: 10px;
-            border-radius: 21px;
+            @include border-radius (20px);
             cursor: pointer;
             width: 18%;
             text-align: center;
@@ -51,11 +46,11 @@ $font-familly-text: "roboto", "cursive";
                   color: $color-primary;
             }
       }  
-      @media #{$mobile}{
-            &__btn{
-                  margin-bottom: 20px;
+            @media #{$mobile}{
+                  &__btn{
+                        margin-bottom: 20px;
+                  }
             }
-      }
 }
 .command-btn {
       display: flex;
@@ -64,17 +59,16 @@ $font-familly-text: "roboto", "cursive";
                   border: $color-primary;
                   background: linear-gradient(to top, #9356DC,#FF79DA);
                   padding: 20px 80px ;
-                  border-radius: 35px;
-                  color: white;
+                  @include border-radius (35px);                  color: white;
                   font-size: 20px;
                   font-family: $font-familly-text;
                   cursor: pointer;
                   margin: 50px 0;
                   transition: 0.3s;
-                  &:hover{
-                        transform: scale(1.04);
-                        background: linear-gradient(to top, #bc89fa,#f09dd8);
-                        box-shadow: 5px 5px 10px rgb(158, 157, 157);
-                  }
+                        &:hover{
+                              transform: scale(1.04);
+                              background: linear-gradient(to top, #bc89fa,#f09dd8);
+                              box-shadow: 5px 5px 10px rgb(158, 157, 157);
+                        }
             }
-      }
+}

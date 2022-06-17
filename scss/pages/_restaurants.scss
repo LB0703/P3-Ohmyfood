@@ -72,9 +72,9 @@
       font-size: 17px;
 }
 .menu-item {
-      margin: 0 30px;
+      margin: 0 10px;
       margin-top: 20px;      
-      width: 50%;
+      width: 30%;
             @media #{$mobile}{
                   width: 90%;
                   margin: 0 20px;
@@ -88,11 +88,10 @@
 .menu-item h2:after{
       content: "";
       display: block;
-      border-bottom: 5px solid#99E2D0;
+      border-bottom: 3px solid#99E2D0;
       height: 6px;
       width: 45px;
 }
-
 .submenu-item {
       display: flex;
       justify-content: space-between;
@@ -117,76 +116,76 @@
             white-space: nowrap;
             text-overflow: ellipsis;
       }
-            &__choice {
-                  overflow: hidden;
-                  white-space: nowrap;
-                  text-overflow: ellipsis;
-                  margin-left: 15px;
-                  padding: 15px 0 ;
-                        @media #{$mobile}{
-                              width: 100%;
-                              font-size: 16px;
-                        }
-            }
-            &__text{
-                  overflow: hidden;
-                  white-space: nowrap;
-                  text-overflow: ellipsis;
-                  font-family: $font-familly-text;
-                  padding-top: 5px;
-                  padding-right: 5px;
-                        @media #{$mobile}{
-                              font-size: 15px;
-                        }
-            }
-            &__price {
-                  display: flex;
-                  justify-content: flex-end;
-                  align-items: flex-end;
-                  margin-left: auto;
-                  margin-bottom: 15px;
-                  font-weight: bold;
-                        @media #{$mobile}{
-                              font-size: 15px;
-                              padding-right: 15px;
-                        }
-            }
-            &__check-command {
-                  display: flex;
-                  justify-content: center;
-                  align-items: center;
-                  background-color: $color-tertiary;
-                  width: 100px;
-                  @include border-radius (0 15px 15px 0);
-                  color: white;
-                  font-size: 30px;
-                  cursor: pointer;
-                  opacity: 1;
-                  text-align: center;
-                  margin-right: -100px;
-                  margin-left: 20px;
-                  animation-name: check-section;
-                  animation-delay: 0s;
-                  animation-iteration-count: 1;
-                  animation-duration: 3s;
-                  animation-direction: normal;
-                  animation-fill-mode: both;
-            }      
-                        &:hover {
-                              .submenu-item__check-command{ 
-                                    opacity: 1;
-                                    margin-right: 0px; 
-                                    transition-duration:  1s; 
-                              i{
-                                    animation: check 1s linear;
-                                    transition: transform 600ms;
-                              }
-                              }
-                        }
-}
-}
-@media #{$desktop}{
-      .submenu-item{
-      width: 90%;
+      &__choice {
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            margin-left: 15px;
+            padding: 15px 0 ;
+                  @media #{$mobile}{
+                        width: 100%;
+                        font-size: 16px;
+                  }
       }
+      &__text{
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            font-family: $font-familly-text;
+            padding-top: 5px;
+            padding-right: 5px;
+                  @media #{$mobile}{
+                        font-size: 15px;
+                  }
+      }
+      &__price {
+            display: flex;
+            justify-content: flex-end;
+            align-items: flex-end;
+            margin-left: auto;
+            margin-bottom: 15px;
+            font-weight: bold;
+                  @media #{$mobile}{
+                        font-size: 15px;
+                        padding-right: 15px;
+                  }
+      }
+      &__check-command {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: $color-tertiary;
+            width: 100px;
+            @include border-radius (0 15px 15px 0);
+            color: white;
+            font-size: 30px;
+            cursor: pointer;
+            opacity: 1;
+            text-align: center;
+            margin-right: -100px;
+            margin-left: 20px;
+            animation-name: check-section;
+            animation-delay: 0s;
+            animation-iteration-count: 1;
+            animation-duration: 3s;
+            animation-direction: normal;
+            animation-fill-mode: both;
+            }      
+                  &:hover {
+                        .submenu-item__check-command{ 
+                              opacity: 1;
+                              margin-right: 0px; 
+                              transition-duration:  1s; 
+                                    i{
+                                          animation: check 0.6s linear;
+                                          transition: transform 600ms;
+                                    }
+                        }
+                  }
 }
+}
+      @media #{$desktop}{
+            .submenu-item{
+            width: 90%;
+            }
+      }     

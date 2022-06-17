@@ -7,13 +7,11 @@
 }
 @keyframes deco {
       0%{
-            transform: scale(3);
-      }
-      50%{
-            transform: scale(2);
-      }
-      100%{
             transform: scale(1);
+      }
+     
+      100%{
+            transform: scale(0.1);
       }
 }
 @keyframes rotation {
@@ -27,12 +25,10 @@
 
 @keyframes display-menu {
       0%{
-            transform: translateY(50px);
-            opacity: 0;
+            transform: translateY(80px);
       }
       100%{
             transform: translateY(0px);
-            opacity: 1;
       }
 }
 

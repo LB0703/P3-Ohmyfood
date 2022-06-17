@@ -377,13 +377,10 @@ p {
 }
 @keyframes deco {
   0% {
-    transform: scale(3);
-  }
-  50% {
-    transform: scale(2);
+    transform: scale(1);
   }
   100% {
-    transform: scale(1);
+    transform: scale(0.1);
   }
 }
 @keyframes rotation {
@@ -396,12 +393,10 @@ p {
 }
 @keyframes display-menu {
   0% {
-    transform: translateY(50px);
-    opacity: 0;
+    transform: translateY(80px);
   }
   100% {
     transform: translateY(0px);
-    opacity: 1;
   }
 }
 @keyframes check {
@@ -612,7 +607,7 @@ p {
   margin: auto;
   color: #9356DC;
   font-weight: 200;
-  font-size: 20px;
+  font-size: 80px;
   animation: deco;
   animation-delay: 0s;
   animation-duration: 3s;
@@ -764,7 +759,7 @@ p {
     height: 150px;
   }
 }
-@media only screen and (min-width: 768px) and (max-width: 1000px) {
+@media only screen and (min-width: 768px) and (max-width: 1300px) {
   .container-restaurants {
     width: 100%;
   }
@@ -845,7 +840,7 @@ p {
     flex-direction: column;
   }
 }
-@media only screen and (min-width: 768px) and (max-width: 1000px) {
+@media only screen and (min-width: 768px) and (max-width: 1300px) {
   .menu .menu-container {
     flex-direction: column;
   }
@@ -855,9 +850,9 @@ p {
   font-size: 17px;
 }
 .menu .menu-item {
-  margin: 0 30px;
+  margin: 0 10px;
   margin-top: 20px;
-  width: 50%;
+  width: 30%;
 }
 @media only screen and (max-width:767px) {
   .menu .menu-item {
@@ -865,7 +860,7 @@ p {
     margin: 0 20px;
   }
 }
-@media only screen and (min-width: 768px) and (max-width: 1000px) {
+@media only screen and (min-width: 768px) and (max-width: 1300px) {
   .menu .menu-item {
     width: 70%;
     margin: auto;
@@ -874,7 +869,7 @@ p {
 .menu .menu-item h2:after {
   content: "";
   display: block;
-  border-bottom: 5px solid #99E2D0;
+  border-bottom: 3px solid #99E2D0;
   height: 6px;
   width: 45px;
 }
@@ -1004,11 +999,11 @@ p {
   transition-duration: 1s;
 }
 .menu .submenu-item:hover .submenu-item__check-command i {
-  animation: check 1s linear;
+  animation: check 0.6s linear;
   transition: transform 600ms;
 }
 
-@media only screen and (min-width: 1001px) and (max-width: 1800px) {
+@media only screen and (min-width: 1301px) and (max-width: 1800px) {
   .submenu-item {
     width: 90%;
   }
@@ -1038,7 +1033,7 @@ p {
   outline: none;
 }
 
-@media only screen and (min-width: 768px) and (max-width: 1000px) {
+@media only screen and (min-width: 768px) and (max-width: 1300px) {
   .localisation__name-city {
     width: 26%;
   }
@@ -1114,7 +1109,6 @@ p {
   justify-content: center;
   align-items: center;
   color: #fff;
-  bottom: 1.3rem;
   left: -12px;
   height: 24px;
   width: 24px;
@@ -1123,7 +1117,7 @@ p {
   border-radius: 100%;
   background-color: #9356DC;
 }
-@media only screen and (min-width: 1001px) and (max-width: 1800px) {
+@media only screen and (min-width: 1301px) and (max-width: 1800px) {
   .functioning__list {
     display: flex;
     justify-content: space-evenly;
@@ -1135,7 +1129,7 @@ p {
     align-items: center;
   }
 }
-@media only screen and (min-width: 768px) and (max-width: 1000px) {
+@media only screen and (min-width: 768px) and (max-width: 1300px) {
   .functioning li {
     display: flex;
     justify-content: space-around;

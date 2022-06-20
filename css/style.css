@@ -401,18 +401,10 @@ p {
 }
 @keyframes check {
   from {
-    transform: rotate(-270deg);
+    transform: rotate(-720deg);
   }
   to {
     transform: rotate(0deg);
-  }
-}
-@keyframes check-section {
-  from {
-    transform: translateX(100px);
-  }
-  to {
-    transform: translateX(0px);
   }
 }
 .footer {
@@ -992,6 +984,7 @@ p {
   animation-duration: 3s;
   animation-direction: normal;
   animation-fill-mode: both;
+  transition: 0.3s;
 }
 .menu .submenu-item:hover .submenu-item__check-command {
   opacity: 1;
